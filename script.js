@@ -18,3 +18,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu  = document.querySelector('.nav-menu');
+  
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  });
+  
