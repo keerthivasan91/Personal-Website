@@ -37,6 +37,8 @@ def projects():
 def skills():
     return render_template('skills.html')
 
+app.config['MAIL_DEFAULT_SENDER'] = 'keerthivasan1617@gmail.com'
+
 mail = Mail(app)
 
 @app.route('/contacts', methods=['GET', 'POST'])
