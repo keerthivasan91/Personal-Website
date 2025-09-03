@@ -7,7 +7,7 @@ load_dotenv()  # loads variables from .env
 
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY")
+app.secret_key = os.getenv("SECRET_KEY", "fallback-secret-key")
 
 # Flask-Mail configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -46,9 +46,11 @@ def contacts():
         email = request.form.get('email')
         message_content = request.form.get('message')
 
-        # Create the email
-        msg = Message(subject=f"New Contact Form Message from {name}",
-                      recipients=['keerthivasan1617@gmail.com'])  # Your receiving email
+        msg = Message(
+            subject=f"New Contact Form Message from {name}",
+            recipients=[os.getenv("MAIL_USERNAME")],
+            sender=os.getenv("MAIL_USERNAME")
+        )
         msg.body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message_content}"
 
         try:
@@ -60,7 +62,9 @@ def contacts():
             flash("Failed to send message. Try again later.", "error")
             return render_template('contacts.html', success=False)
 
-    return render_template('contacts.html', success=False)
+    # Always return a template for GET requests
+    return render_template('contacts.html', success=None)
+
 
 
 @app.route("/test-mail")
@@ -72,7 +76,7 @@ def test_mail():
         return "Mail sent!"
     except Exception as e:
         return str(e)
-    
+
 
 if __name__ == "__main__":
     app.run(debug=True)
