@@ -37,7 +37,7 @@ def projects():
 def skills():
     return render_template('skills.html')
 
-app.config['MAIL_DEFAULT_SENDER'] = 'keerthivasan1617@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER', 'keerthivasan1617@gmail.com')
 
 mail = Mail(app)
 
