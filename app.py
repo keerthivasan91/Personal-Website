@@ -62,5 +62,17 @@ def contacts():
 
     return render_template('contacts.html', success=False)
 
+
+@app.route("/test-mail")
+def test_mail():
+    try:
+        msg = Message("Test Mail", recipients=[os.getenv("MAIL_USERNAME")])
+        msg.body = "Hello, this is a test."
+        mail.send(msg)
+        return "Mail sent!"
+    except Exception as e:
+        return str(e)
+    
+
 if __name__ == "__main__":
     app.run(debug=True)
