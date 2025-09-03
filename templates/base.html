@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Keerthi Vasan{% endblock %}</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/Logo.jpg') }}" sizes="32x32" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description"
+    content="Keerthi Vasan's personal portfolio showcasing skills, projects, and education in Computer Science Engineering." />
+  <meta name="keywords" content="Keerthi Vasan, Portfolio, Computer Science, Programming, Developer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header and Navigation -->
+  <header id="home">
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Me</a></li>
+          <li><a href="{{ url_for('education') }}">Education</a></li>
+          <li><a href="{{ url_for('projects') }}">Projects</a></li>
+          <li><a href="{{ url_for('skills') }}">Skills</a></li>
+          <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block header_content %}
+    {% endblock %}
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="content-container"></div>
+      {% block about %} {% endblock about %} {% block education %} {% endblock
+      education %} {% block projects %} {% endblock projects %} {% block skills
+      %} {% endblock skills %} {% block contacts %} {% endblock contacts %}
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-credit">
+      <p>© 2025 Keerthi Vasan. All rights reserved.</p>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="footer-top">
+      <a href="#home" class="back-to-top">↑</a>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
