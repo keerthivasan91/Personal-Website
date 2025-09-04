@@ -1,6 +1,7 @@
 # Keerthi Vasan Portfolio
 
-A personal portfolio website showcasing my background, skills, and projects.
+This is a personal portfolio website built using **Flask** and deployed on **Vercel**.  
+It includes multiple sections (About, Education, Projects, Skills) and a **Contact Form** that sends emails via **Flask-Mail** and Gmail SMTP.
 
 ## Sections
 
@@ -11,14 +12,21 @@ A personal portfolio website showcasing my background, skills, and projects.
 - **Skills**: Technical and soft skills  
 - **Contact**: Email link and social icons  
 
-## Tech Stack
+---
 
-- HTML5  
-- CSS3 (Dark theme)  
-- JavaScript (Smooth scroll)  
+## 🚀 Features
+- 🖼️ Portfolio pages: About, Education, Projects, Skills  
+- 📬 Contact form with email notifications (via Gmail SMTP)  
+- 🔒 Secure environment variable handling with `.env`  
+- 🌍 Deployable on **Vercel** for free hosting  
 
-## Getting Started
+---
 
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
+## 🛠️ Tech Stack
+- **Backend:** Flask (Python)  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Mail Service:** Flask-Mail + Gmail SMTP  
+- **Deployment:** Vercel  
+
+---
+
