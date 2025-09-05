@@ -8,7 +8,7 @@ It includes multiple sections (About, Education, Projects, Skills) and a **Conta
 - **Home**: Hero section with introduction and social links  
 - **About Me**: Brief bio and core skills  
 - **Education**: Academic history  
-- **Projects**: (Coming soon)  
+- **Projects**: Project Details with Demo and Source code
 - **Skills**: Technical and soft skills  
 - **Contact**: Email link and social icons  
 
