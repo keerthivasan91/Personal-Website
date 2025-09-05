@@ -28,5 +28,4 @@ It includes multiple sections (About, Education, Projects, Skills) and a **Conta
 - **Mail Service:** Flask-Mail + Gmail SMTP  
 - **Deployment:** Vercel  
 
----
 
