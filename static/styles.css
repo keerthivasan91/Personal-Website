@@ -167,22 +167,22 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin:  auto;
 }
 
 #cta .section-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 
 #cta .introduction {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 3px auto;
 }
 
 .profile-image {
-    flex: 1 1 250px;
+    flex: 1 1 200px;
     text-align: center;
     min-width: 200px;
 }
@@ -266,7 +266,7 @@ nav ul li a:hover {
 
 /* Education Section */
 #education {
-    padding: clamp(3rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
+    padding: clamp(4rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
     background-color: #121212;
 }
 
@@ -506,7 +506,7 @@ h3 {
 
 /* Contact Section */
 #contact {
-    padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 2rem);
+    padding: clamp(12.9rem, 3vw, 2rem) clamp(1rem, 4vw, 2rem);
     text-align: center;
     background-color: #121212;
 }
@@ -584,13 +584,13 @@ h3 {
 footer {
     background-color: #333;
     color: #fff;
-    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1rem);
+    padding: clamp(1rem, 2vw, 1rem) clamp(1rem, 3vw, 1rem);
     text-align: center;
     font-size: clamp(0.9rem, 2.3vw, 1rem);
 }
 
 .footer-credit {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-credit p {
