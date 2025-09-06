@@ -28,3 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+const backToTop = document.querySelector(".back-to-top");
+backToTop.style.display = "none";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
