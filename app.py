@@ -21,23 +21,23 @@ mail = Mail(app)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html',active_page='home')
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html',active_page='about')
 
 @app.route('/education')
 def education():
-    return render_template('education.html')
+    return render_template('education.html',active_page='education')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html',active_page='projects')
 
 @app.route('/skills')
 def skills():
-    return render_template('skills.html')
+    return render_template('skills.html',active_page='skills')
 
 @app.route('/contacts', methods=['GET', 'POST'])
 def contacts():
