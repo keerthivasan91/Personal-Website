@@ -49,7 +49,7 @@ def contacts():
         recipient = os.getenv("MAIL_USERNAME")
         if not recipient:
             flash("Mail username not configured!", "error")
-            return render_template('contacts.html', success=False)
+            return render_template('contacts.html', success=False, active_page='contacts')
 
         msg = Message(
             subject=f"New Contact Form Message from {name}",
@@ -60,13 +60,13 @@ def contacts():
         try:
             mail.send(msg)
             flash("Message sent successfully!", "success")
-            return render_template('contacts.html', success=True)
+            return render_template('contacts.html', success=True, active_page='contacts')
         except Exception as e:
             print("Mail send error:", e)
             flash("Failed to send message. Try again later.", "error")
-            return render_template('contacts.html', success=False)
+            return render_template('contacts.html', success=False, active_page='contacts')
 
-    return render_template('contacts.html', success=None)
+    return render_template('contacts.html', success=None, active_page='contacts')
 
 @app.route("/test-mail")
 def test_mail():
