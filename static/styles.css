@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 nav a.active {
     color: white;
-    border-bottom: 3px solid #00acc1;
+    border-bottom: 3px solid #03dac6;
 }
 
 @media (max-width: 768px) {
