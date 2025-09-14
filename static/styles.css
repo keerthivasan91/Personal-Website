@@ -47,6 +47,13 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+nav a.active {
+    color: #1f1f1f;
+    background: #03dac6;
+    border-radius: 5px;
+}
+
+
 /* Hamburger button */
 .nav-toggle {
     display: none;
@@ -130,7 +137,7 @@ nav ul li a:hover {
 }
 
 .hero .social-links a:hover {
-    background-color:#03dac6;
+    background-color: #03dac6;
     transform: scale(1.1);
     color: white;
 }
@@ -167,7 +174,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     max-width: 800px;
-    margin:  auto;
+    margin: auto;
 }
 
 #cta .section-title {
@@ -631,7 +638,7 @@ footer {
     line-height: clamp(35px, 8vw, 45px);
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -642,6 +649,7 @@ footer {
 
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
+
     /* Show hamburger */
     .nav-toggle {
         display: block;
@@ -657,13 +665,13 @@ footer {
         width: 100%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-    
+
     .nav-menu ul {
         flex-direction: column;
         padding: 1rem 0;
         gap: 0;
     }
-    
+
     .nav-menu ul li {
         margin: 0.3rem 0;
         text-align: center;
@@ -678,11 +686,11 @@ footer {
     .nav-toggle.open .hamburger {
         background: transparent;
     }
-    
+
     .nav-toggle.open .hamburger::before {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .nav-toggle.open .hamburger::after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
@@ -713,7 +721,7 @@ footer {
     .about-me {
         width: 90%;
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -725,6 +733,7 @@ footer {
 
 /* Large desktop adjustments */
 @media (min-width: 1200px) {
+
     .about-me,
     .education-entry,
     .projects-container,
@@ -732,18 +741,19 @@ footer {
     .achievement-card {
         max-width: 1200px;
     }
-    
+
     .hero {
         padding: 80px 40px;
     }
-    
+
     .hero h1 {
         font-size: 3.2em;
     }
 }
 
 /* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .profile-photo {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
@@ -752,6 +762,7 @@ footer {
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -763,17 +774,18 @@ footer {
 
 /* Print styles */
 @media print {
+
     .nav-toggle,
     .back-to-top,
     .contact-form {
         display: none;
     }
-    
+
     body {
         background: white;
         color: black;
     }
-    
+
     .hero,
     .about-me,
     .education-entry,
