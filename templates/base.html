@@ -18,20 +18,20 @@
   <!-- Header and Navigation -->
   <header id="home">
     <nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <div class="nav-menu">
-        <ul>
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About Me</a></li>
-          <li><a href="{{ url_for('education') }}">Education</a></li>
-          <li><a href="{{ url_for('projects') }}">Projects</a></li>
-          <li><a href="{{ url_for('skills') }}">Skills</a></li>
-          <li><a href="{{ url_for('contacts') }}">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+  <div class="nav-menu">
+    <ul>
+      <li><a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
+      <li><a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">About Me</a></li>
+      <li><a href="{{ url_for('education') }}" class="{% if active_page == 'education' %}active{% endif %}">Education</a></li>
+      <li><a href="{{ url_for('projects') }}" class="{% if active_page == 'projects' %}active{% endif %}">Projects</a></li>
+      <li><a href="{{ url_for('skills') }}" class="{% if active_page == 'skills' %}active{% endif %}">Skills</a></li>
+      <li><a href="{{ url_for('contacts') }}" class="{% if active_page == 'contacts' %}active{% endif %}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
     {% block header_content %}
     {% endblock %}
