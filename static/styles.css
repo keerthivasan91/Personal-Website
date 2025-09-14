@@ -48,11 +48,20 @@ nav ul li a:hover {
 }
 
 nav a.active {
-    color: #1f1f1f;
-    background: #03dac6;
-    border-radius: 5px;
+    color: white;
+    border-bottom: 3px solid #00acc1;
 }
 
+@media (max-width: 768px) {
+  nav a.active {
+    border-bottom: none;      
+    background: #00acc1;       
+    color: white;               
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+}
 
 /* Hamburger button */
 .nav-toggle {
