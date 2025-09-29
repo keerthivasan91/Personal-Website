@@ -325,199 +325,212 @@ nav a.active {
 }
 
 /* Projects Section */
-#projects {
-    padding: clamp(3rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
-    background-color: #121212;
+.projects-section {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #fff;
 }
 
-#projects h2 {
-    text-align: center;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    color: #03dac6;
-    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+.projects-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #03dac6;
+  margin-bottom: 40px;
 }
 
-.projects-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* Main Project */
 .project-entry {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    margin-bottom: 2rem;
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-left: 5px solid #03dac6;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-left: 5px solid #03dac6;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.project-entry:hover {
+  transform: translateY(-5px);
+  border-color: #00ffe0;
 }
 
 .project-entry h3 {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    color: #00acc1;
-    margin-bottom: 1rem;
+  font-size: 22px;
+  color: #00acc1;
+  margin-bottom: 10px;
 }
 
 .project-entry p {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    color: #ccc;
-    line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-.project-entry.empty {
-    text-align: center;
-    border-left-color: #00acc1;
-}
-
-.project-entry.empty h3 {
-    color: #00acc1;
-    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
-}
-
-.project-entry.empty p {
-    color: #aaa;
-}
-
+/* Mini Projects */
 .mini-projects {
-    background-color: #1e1e1e;
-    margin-top: 2rem;
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-left: 5px solid #03dac6;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  margin-top: 3rem;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-left: 5px solid #03dac6;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .mini-projects h3 {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    color: #03dac6;
-    margin-bottom: 1rem;
+  color: #03dac6;
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
+/* Mini Projects Grid */
+.mini-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Each Mini Project */
 .mini-project {
-    margin-bottom: 1.2rem;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.mini-project:hover {
+  transform: translateY(-5px);
+  background-color: #292929;
 }
 
 .mini-project h4 {
-    color: #bb86fc;
-    margin-bottom: 0.3rem;
-    font-size: clamp(1rem, 2.8vw, 1.2rem);
+  color: #bb86fc;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .mini-project p {
-    color: #ccc;
-    margin-bottom: 0.5rem;
-    font-size: clamp(0.9rem, 2.3vw, 1rem);
-    line-height: 1.5;
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
-.mini-project a {
-    color: #03dac6;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
+/* Project Links */
 .project-links {
-    display: flex;
-    gap: clamp(0.5rem, 2vw, 1rem);
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .project-links a {
-    color: #03dac6;
-    background-color: #292929;
-    padding: clamp(4px, 1.5vw, 6px) clamp(8px, 2.5vw, 12px);
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #03dac6;
+  background-color: #292929;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .project-links a:hover {
-    background-color: #03dac6;
-    color: #000;
+  background-color: #03dac6;
+  color: #000;
 }
+
 
 /* Skills Section */
-#skills {
-    padding: clamp(3rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
-    background-color: #121212;
+.skills-section {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #ffffff;
 }
 
-#skills h2 {
-    text-align: center;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    color: #03dac6;
-    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+.skills-section h2 {
+  text-align: center;
+  color: #00ffe0;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
-h3 {
-    color: #03dac6;
-    margin-bottom: 1.5rem;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+.skills-section h3 {
+  color: #00ffe0;
+  font-size: 24px;
+  margin: 30px 0 20px;
 }
 
+/* Skill Cards */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    gap: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: 3rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.soft-skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
 .skill-card {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-left: 5px solid #03dac6;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.skill-card h3 {
-    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
-    color: #00acc1;
-    margin-bottom: 1rem;
+.skill-card:hover {
+  transform: translateY(-5px);
+  background-color: #222222;
 }
 
-.skill-card ul {
-    list-style: none;
-    padding: 0;
+/* Achievements */
+.achievements-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-
-.skill-card li {
-    color: #ccc;
-    margin-bottom: 0.5rem;
-    font-size: clamp(0.9rem, 2.3vw, 1rem);
-    line-height: 1.5;
-}
-
-/* Achievement Section */
 .achievement-card {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-left: 5px solid #03dac6;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    margin-bottom: 1.5rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
+  background-color: #1e1e1e;
+  border-left: 5px solid #00ffe0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9f1a;
 }
 
 .achievement-card h4 {
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
-    color: #00acc1;
-    margin-bottom: 1rem;
+  color: #00ffe0;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .achievement-card p {
-    font-size: clamp(0.9rem, 2.3vw, 1rem);
-    line-height: 1.6;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.achievement-card .cert-link {
+  color: #ff9f1a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.achievement-card .cert-link:hover {
+  color: #00ffe0;
 }
 
 /* Contact Section */
