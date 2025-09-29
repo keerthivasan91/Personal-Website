@@ -1,37 +1,42 @@
 {% extends 'base.html' %}
 {% block about %}
-    <!-- About Me Section -->
-    <section class="about-me" id="about">
-        <div class="about-me-container">
-            <article class="about-me-content">
-                <div class="profile-image">
-                    <img src="{{ url_for('static', filename='Images/pic.png') }}" alt="Keerthi Vasan" class="profile-photo">
+<!-- About Me Section -->
+<section class="about-me" id="about">
+    <div class="about-me-container">
+        <article class="about-me-content">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='Images/PIC.jpg') }}" alt="Keerthi Vasan" class="profile-photo">
+            </div>
+            <div class="about-me-text">
+                <h2 class="section-title">About Me</h2>
+                <p class="introduction">
+                    I’m a Computer Science Engineering student at Cambridge Institute of Technology,
+                    passionate about programming, solving problems, and building real-world IT solutions.
+                    I learn fast, love teamwork, and am currently seeking internships to gain hands-on
+                    experience.<br><br>
+                    In my free time, I enjoy playing Games , Watching Movies/series and learning about new technologies
+                    .<br><br>
+                    If you’re interested in connecting or collaborating, feel free to reach out or follow me on social
+                    media. I’m always eager to learn about technology, projects, and new ideas!
+                </p>
+                <div class="skills-list">
+                    <h4>Core Skills</h4>
+                    <ul class="skill-tags">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C Programming</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul><br>
                 </div>
-                <div class="about-me-text">
-                    <h2 class="section-title">About Me</h2> 
-                    <p class="introduction">
-                        I’m a Computer Science Engineering student at Cambridge Institute of Technology,
-                        passionate about programming, solving problems, and building real-world IT solutions.
-                        I learn fast, love teamwork, and am currently seeking internships to gain hands-on experience.<br><br>
-                        In my free time, I enjoy playing Games , Watching Movies/series and learning about new technologies .<br><br>
-                        If you’re interested in connecting or collaborating, feel free to reach out or follow me on social media. I’m always eager to learn about technology, projects, and new ideas!
-                    </p>
-                    <div class="skills-list">
-                        <h4>Core Skills</h4>
-                        <ul class="skill-tags">
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C Programming</li>
-                            <li>HTML/CSS</li>
-                            <li>JavaScript</li>
-                            <li>SQL</li>
-                        </ul><br>
-                    </div>
-                    <div class="cta-section">
-                        <a href="{{ url_for('static', filename='resume-3.pdf') }}" download class="cta-button" target="_blank">Download Resume</a>
- </div>                   </div>
+                <div class="cta-section">
+                    <a href="{{ url_for('static', filename='resume-3.pdf') }}" download class="cta-button"
+                        target="_blank">Download Resume</a>
                 </div>
-            </article>
-        </div>
-    </section>
-{% endblock  %}
+            </div>
+    </div>
+    </article>
+    </div>
+</section>
+{% endblock %}
