@@ -1,46 +1,49 @@
 {% extends 'base.html' %}
 {% block skills %}
-    <!-- Skills Section -->
-<section id="skills">
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
     <h2>Skills & Expertise</h2>
-    
+
     <!-- Technical Skills -->
     <h3>Technical Skills</h3>
     <div class="skills-grid">
-      <div class="skill-card"><h3>Python</h3></div>
-      <div class="skill-card"><h3>Java</h3></div>
-      <div class="skill-card"><h3>C Programming</h3></div>
-      <div class="skill-card"><h3>HTML & CSS</h3></div>
-      <div class="skill-card"><h3>JavaScript</h3></div>
-      <div class="skill-card"><h3>SQL</h3></div>
-      <div class="skill-card"><h3>Git & GitHub</h3></div>
-      <div class="skill-card"><h3>Docker</h3></div>
-      <div class="skill-card"><h3>Basic AWS</h3></div>
+      <div class="skill-card"><h4>Python</h4></div>
+      <div class="skill-card"><h4>Java</h4></div>
+      <div class="skill-card"><h4>C Programming</h4></div>
+      <div class="skill-card"><h4>HTML & CSS</h4></div>
+      <div class="skill-card"><h4>JavaScript</h4></div>
+      <div class="skill-card"><h4>SQL</h4></div>
+      <div class="skill-card"><h4>Git & GitHub</h4></div>
+      <div class="skill-card"><h4>Docker</h4></div>
+      <div class="skill-card"><h4>Basic AWS</h4></div>
     </div>
-  
-    <!-- Soft Skills Section -->
+
+    <!-- Soft Skills -->
     <h3>Soft Skills</h3>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Teamwork</h3>
-      </div>
-      <div class="skill-card">
-        <h3>Communication</h3>
-      </div>
-      <div class="skill-card">
-        <h3>Problem-Solving</h3>
-      </div>
+    <div class="skills-grid soft-skills-grid">
+      <div class="skill-card"><h4>Teamwork</h4></div>
+      <div class="skill-card"><h4>Communication</h4></div>
+      <div class="skill-card"><h4>Problem-Solving</h4></div>
     </div>
-  
-    <!-- Certifications & Achievements Section 
+
+    <!-- Certifications & Achievements -->
     <h3>Certifications & Achievements</h3>
-    <div class="achievement-card">
-      <h4>Example Certification 1</h4>
+    <div class="achievements-container">
+      <div class="achievement-card">
+        <h4>Programming, Data Structures and Algorithms using Python</h4>
+        <p><strong>Platform:</strong> NPTEL | <strong>Completed:</strong> September 2025</p>
+        <a href="certificate-link.pdf" target="_blank" class="cert-link">View & Verify Certificate</a>
+      </div>
+
+      <div class="achievement-card">
+        <h4>Full Stack Web Development Internship</h4>
+        <p><strong>Platform:</strong> Codec Technologies | <strong>Completed:</strong> August 2025</p>
+        <a href="certificate-link.pdf" target="_blank" class="cert-link">View & Verify Certificate</a>
+      </div>
+
+      <!-- Add more achievements here -->
     </div>
-    <div class="achievement-card">
-      <h4>Example Certification 2</h4>
-    </div>
-  </section>-->
-  
-    </section>
-{% endblock skills  %}
+  </div>
+</section>
+{% endblock skills %}
