@@ -4,5 +4,3 @@ __pycache__/
 instance/
 .env
 /portfolio-env/
-/static/Images/
-resume.pdf
