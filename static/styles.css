@@ -330,121 +330,265 @@ nav a.active {
 
 /* Projects Section */
 .projects-section {
-  padding: 50px 20px;
-  background-color: #121212;
-  color: #fff;
+    padding: 50px 20px;
+    background-color: #121212;
+    color: #fff;
 }
 
 .projects-section h2 {
-  text-align: center;
-  font-size: 36px;
-  color: #03dac6;
-  margin-bottom: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: #03dac6;
+    margin-bottom: 40px;
 }
 
 /* Main Project */
 .project-entry {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-left: 5px solid #03dac6;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-  transition: transform 0.2s, border-color 0.3s;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-left: 5px solid #03dac6;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s, border-color 0.3s;
 }
 
 .project-entry:hover {
-  transform: translateY(-5px);
-  border-color: #00ffe0;
+    transform: translateY(-5px);
+    border-color: #00ffe0;
 }
 
 .project-entry h3 {
-  font-size: 22px;
-  color: #00acc1;
-  margin-bottom: 10px;
+    font-size: 22px;
+    color: #00acc1;
+    margin-bottom: 10px;
 }
 
 .project-entry p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 /* Mini Projects */
 .mini-projects {
-  margin-top: 3rem;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-left: 5px solid #03dac6;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    margin-top: 3rem;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-left: 5px solid #03dac6;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .mini-projects h3 {
-  color: #03dac6;
-  font-size: 22px;
-  margin-bottom: 1.5rem;
-  text-align: center;
+    color: #03dac6;
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 /* Mini Projects Grid */
 .mini-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 /* Each Mini Project */
 .mini-project {
-  background-color: #222;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s, background-color 0.2s;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .mini-project:hover {
-  transform: translateY(-5px);
-  background-color: #292929;
+    transform: translateY(-5px);
+    background-color: #292929;
 }
 
 .mini-project h4 {
-  color: #bb86fc;
-  margin-bottom: 8px;
-  font-size: 18px;
+    color: #bb86fc;
+    margin-bottom: 8px;
+    font-size: 18px;
 }
 
 .mini-project p {
-  color: #ddd;
-  font-size: 14px;
-  margin-bottom: 10px;
-  line-height: 1.5;
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 /* Project Links */
 .project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .project-links a {
-  color: #03dac6;
-  background-color: #292929;
-  padding: 6px 12px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background 0.3s ease, color 0.3s ease;
+    color: #03dac6;
+    background-color: #292929;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .project-links a:hover {
-  background-color: #03dac6;
-  color: #000;
+    background-color: #03dac6;
+    color: #000;
 }
 
+/* Project Images - UPDATED */
+.project-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 3rem;
+}
 
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Hide the icon when image is present */
+.project-image:has(img)::before {
+    display: none !important;
+}
+
+.project-entry:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Mini Project Images - UPDATED */
+.mini-project-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, #2563eb, #f59e0b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.mini-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Hide the icon when image is present */
+.mini-project-image:has(img)::before {
+    display: none !important;
+}
+
+.mini-project:hover .mini-project-image img {
+    transform: scale(1.05);
+}
+
+/* Icon backgrounds for projects without images - UPDATED */
+.project-image:not(:has(img))::before {
+    content: '🤖';
+}
+
+.project-image.portfolio-icon:not(:has(img))::before {
+    content: '💼';
+}
+
+.mini-project-image.calculator-icon:not(:has(img))::before {
+    content: '🧮';
+}
+
+.mini-project-image.game-icon:not(:has(img))::before {
+    content: '🎮';
+}
+
+.mini-project-image.chatbot-icon:not(:has(img))::before {
+    content: '🤖';
+}
+
+/* Project tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-tag {
+    background: rgba(3, 218, 198, 0.1);
+    color: #03dac6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(3, 218, 198, 0.2);
+}
+
+/* Placeholder styles - UPDATED */
+.project-image.placeholder:not(:has(img)) {
+    background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-image.placeholder:not(:has(img))::before {
+    content: 'Project Image \A Click to view demo';
+    white-space: pre;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.mini-project-image.placeholder:not(:has(img)) {
+    background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.mini-project-image.placeholder:not(:has(img))::before {
+    content: 'Project Preview';
+    font-size: 0.9rem;
+}
 /* Skills Section */
 .skills-section {
   padding: 50px 20px;
