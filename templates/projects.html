@@ -1,79 +1,126 @@
 {% extends 'base.html' %}
 {% block projects %}
-<section id="projects" class="projects-section">
-  <div class="container">
-    <h2>Projects</h2>
-
-    <!-- Main Project -->
-    <div class="project-entry">
-      <h3>Farmer Bot</h3>
-      <p>
-        An AI-powered chatbot for farmers to get information on crops, disease management, market prices, 
-        and government schemes. <br>
-        <strong>Tech Stack:</strong> JavaScript, OpenWeather API, Market Prices API, Google Gemini API (AI Agent), 
-        and n8n automation workflows.
-      </p><br>
-      <div class="project-links">
-        <a href="http://t.me/Projectkissanbot" target="_blank"> Live Demo</a>
-      </div>
-    </div>
-    <div class="project-entry">
-      <h3>Portfolio Website</h3>
-      <p>
-        A personal portfolio website showcasing my projects, skills, and experience. <br>
-        <strong>Tech Stack:</strong> Flask, HTML, CSS, JavaScript 
-      </p>
-      <br><p>You are currently viewing the portfolio website.</p>
-      <br>
-      <div class="project-links">
-            <a href="" target="_blank">GitHub Repo</a>
-          </div>
-    </div>
-
-    <!-- Mini Projects -->
-    <div class="mini-projects">
-      <h3>Mini Projects</h3>
-      <div class="mini-projects-grid">
-
-        <div class="mini-project">
-          <h4>Simple Calculator</h4>
-          <p>
-            Modern JavaScript calculator with dark UI. Performs arithmetic operations with clean display 
-            and intuitive layout. <br>
-            <strong>Tech Stack:</strong> HTML, CSS, JavaScript
-          </p>
-          <div class="project-links">
-            <a href="https://simple-calculator-rose-theta.vercel.app/" target="_blank">Live Demo</a>
-            <a href="https://github.com/keerthivasan91/Simple-Calculator" target="_blank">GitHub Repo</a>
-          </div>
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <div class="header-line"></div>
         </div>
 
-        <div class="mini-project">
-          <h4>Rock-Paper-Scissors Game</h4>
-          <p>
-            A fun and interactive Rock Paper Scissors game with responsive UI. <br>
-            <strong>Tech Stack:</strong> HTML, CSS, JavaScript
-          </p>
-          <div class="project-links">
-            <a href="https://rock-paper-scissors-three-ruddy.vercel.app/" target="_blank">Live Demo</a>
-            <a href="https://github.com/keerthivasan91/rock-paper-scissors" target="_blank">GitHub Repo</a>
-          </div>
+        <!-- Main Projects Grid -->
+        <div class="projects-grid">
+            <div class="project-entry">
+                <div class="project-image farmer-icon">
+                    <!-- You can replace this with an actual image -->
+                    <!-- <img src="farmer-bot.jpg" alt="Farmer Bot Project"> -->
+                     <img src="./static/images/farmer-bot.png" alt="Farmer Bot Project" >
+                </div>
+                <h3>Farmer Bot</h3>
+                <div class="project-tags">
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Chatbot</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">API Integration</span>
+                </div>
+                <p>
+                    An AI-powered chatbot for farmers to get information on crops, disease management, market prices, 
+                    and government schemes.
+                </p><br>
+                <p><strong>Tech Stack:</strong> JavaScript, OpenWeather API, Market Prices API, Google Gemini API (AI Agent), 
+                and n8n automation workflows.</p><br>
+                <div class="project-links">
+                    <a href="http://t.me/Projectkissanbot" target="_blank">Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="project-entry">
+                <div class="project-image portfolio-icon">
+                     <img src="./static/images/portfolio.png" alt="Portfolio Website" >
+                </div>
+                <h3>Portfolio Website</h3>
+                <div class="project-tags">
+                    <span class="project-tag">Web Development</span>
+                    <span class="project-tag">Responsive</span>
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">JavaScript</span>
+                </div>
+                <p>
+                    A personal portfolio website showcasing my projects, skills, and experience.
+                </p><br>
+                <p><strong>Tech Stack:</strong> Flask, HTML, CSS, JavaScript</p>
+                <p><em>You are currently viewing the portfolio website.</em></p><br>
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
         </div>
 
-        <div class="mini-project">
-          <h4>Telegram Chatbot</h4>
-          <p>
-            A custom chatbot built for Telegram using Python and automation flows. <br>
-            <strong>Tech Stack:</strong> Python, Telegram API, n8n
-          </p>
-          <div class="project-links">
-            <a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>
-            <a href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-" target="_blank">GitHub Repo</a>
-          </div>
-        </div>
+        <!-- Mini Projects -->
+        <div class="mini-projects">
+            <h3>Mini Projects</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project">
+                    <div class="mini-project-image calculator-icon">
+                        <img src="static/images/calculator.png" alt="Simple Calculator"> 
+                    </div>
+                    <h4>Simple Calculator</h4>
+                    <div class="project-tags">
+                        <span class="project-tag">Responsive</span>
+                        <span class="project-tag">Clean UI</span>
+                    </div>
+                    <p>
+                        Modern JavaScript calculator with dark UI. Performs arithmetic operations with clean display 
+                        and intuitive layout.
+                    </p>
+                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                    <div class="project-links">
+                        <a href="https://simple-calculator-rose-theta.vercel.app/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/keerthivasan91/Simple-Calculator" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
 
-      </div>
+                <div class="mini-project">
+                    <div class="mini-project-image game-icon">
+                        <img src="static/images/rock-paper-scissors.png" alt="Rock Paper Scissors Game">
+                    </div>
+                    <h4>Rock-Paper-Scissors Game</h4>
+                    <div class="project-tags">
+                        <span class="project-tag">Game</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Interactive</span>
+                    </div>
+                    <p>
+                        A fun and interactive Rock Paper Scissors game with responsive UI.
+                    </p>
+                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                    <div class="project-links">
+                        <a href="https://rock-paper-scissors-three-ruddy.vercel.app/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/keerthivasan91/rock-paper-scissors" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <div class="mini-project">
+                    <div class="mini-project-image chatbot-icon">
+                        <img src="static/images/telegram-bot.png" alt="Telegram Chatbot">
+                    </div>
+                    <h4>Telegram Chatbot</h4>
+                    <div class="project-tags">
+                        <span class="project-tag">n8n</span>
+                        <span class="project-tag">Automation</span>
+                        <span class="project-tag">API</span>
+                    </div>
+                    <p>
+                        A custom chatbot built for Telegram using Python and automation flows.
+                    </p>
+                    <p><strong>Tech Stack:</strong> Telegram API, n8n</p>
+                    <div class="project-links">
+                        <a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>
+                        <a href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 {% endblock projects %}
