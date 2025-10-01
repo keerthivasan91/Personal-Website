@@ -14,7 +14,7 @@
                 <div class="project-image farmer-icon">
                     <!-- You can replace this with an actual image -->
                     <!-- <img src="farmer-bot.jpg" alt="Farmer Bot Project"> -->
-                     <img src="./static/images/farmer-bot.png" alt="Farmer Bot Project" >
+                     <img src="{{ url_for('static', filename='Images/Profilepic.jpg') }}" alt="Farmer Bot Project">
                 </div>
                 <h3>Farmer Bot</h3>
                 <div class="project-tags">
@@ -36,7 +36,7 @@
             
             <div class="project-entry">
                 <div class="project-image portfolio-icon">
-                     <img src="./static/images/portfolio.png" alt="Portfolio Website" >
+                     <img src="{{ url_for('static', filename='Images/portfolio.png') }}" alt="Portfolio Website" >
                 </div>
                 <h3>Portfolio Website</h3>
                 <div class="project-tags">
@@ -62,7 +62,7 @@
             <div class="mini-projects-grid">
                 <div class="mini-project">
                     <div class="mini-project-image calculator-icon">
-                        <img src="static/images/calculator.png" alt="Simple Calculator"> 
+                        <img src="{{ url_for('static', filename='Images/calculator.png') }}" alt="Simple Calculator">
                     </div>
                     <h4>Simple Calculator</h4>
                     <div class="project-tags">
@@ -82,7 +82,7 @@
 
                 <div class="mini-project">
                     <div class="mini-project-image game-icon">
-                        <img src="static/images/rock-paper-scissors.png" alt="Rock Paper Scissors Game">
+                        <img src="{{ url_for('static', filename='Images/rock-paper-scissors.png') }}" alt="Rock Paper Scissors Game">
                     </div>
                     <h4>Rock-Paper-Scissors Game</h4>
                     <div class="project-tags">
@@ -102,7 +102,7 @@
 
                 <div class="mini-project">
                     <div class="mini-project-image chatbot-icon">
-                        <img src="static/images/telegram-bot.png" alt="Telegram Chatbot">
+                        <img src="{{ url_for('static', filename='Images/telegram-bot.png') }}" alt="Telegram Chatbot">
                     </div>
                     <h4>Telegram Chatbot</h4>
                     <div class="project-tags">
