@@ -10,16 +10,19 @@ body {
     line-height: 1.6;
     background-color: #121212;
     color: #e0e0e0;
+    margin: 0;
+    padding-top: 70px;
 }
 
 /* Navigation Bar */
 nav {
     background-color: #1f1f1f;
     padding: 15px 0;
-    position: sticky;
+    position: fixed;   /* stays at the top */
     top: 0;
+    left: 0;
+    width: 100%;       /* span full width */
     z-index: 1000;
-    position: relative;
 }
 
 nav ul {
@@ -95,12 +98,13 @@ nav a.active {
 .hamburger::after {
     transform: translateY(5px);
 }
-
 /* Nav menu default */
 .nav-menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero Section */
