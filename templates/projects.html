@@ -1,167 +1,305 @@
-{% extends 'base.html' %}
-{% block projects %}
+{% extends 'base.html' %} {% block projects %}
 <!-- Projects Section -->
 <section class="projects-section" id="projects">
-    <div class="container">
-        <div class="section-header">
-            <h2>Projects</h2>
-            <div class="header-line"></div>
-        </div>
-
-        <!-- Main Projects Grid -->
-        <div class="projects-grid">
-            <div class="project-entry">
-                <div class="project-image farmer-icon">
-                    <!-- You can replace this with an actual image -->
-                    <!-- <img src="farmer-bot.jpg" alt="Farmer Bot Project"> -->
-                     <img src="{{ url_for('static', filename='Images/farmer-bot.png') }}" alt="Farmer Bot Project">
-                </div>
-                <h3>Farmer Bot</h3>
-                <div class="project-tags">
-                    <span class="project-tag">AI</span>
-                    <span class="project-tag">Chatbot</span>
-                    <span class="project-tag">JavaScript</span>
-                    <span class="project-tag">API Integration</span>
-                </div>
-                <p>
-                    An AI-powered chatbot for farmers to get information on crops, disease management, market prices, 
-                    and government schemes.<br><br>
-                    (temporarily offline after AWS free-tier expiry).
-                </p><br>
-                <p><strong>Tech Stack:</strong> JavaScript, OpenWeather API, Market Prices API, Google Gemini API (AI Agent), 
-                and n8n automation workflows.</p><br>
-                <div class="project-links">
-                    <a href="http://t.me/Projectkissanbot" target="_blank">Live Demo</a>
-                </div>
-            </div>
-            
-            <div class="project-entry">
-                <div class="project-image portfolio-icon">
-                     <img src="{{ url_for('static', filename='Images/portfolio.png') }}" alt="Portfolio Website" >
-                </div>
-                <h3>Portfolio Website</h3>
-                <div class="project-tags">
-                    <span class="project-tag">Web Development</span>
-                    <span class="project-tag">Responsive</span>
-                    <span class="project-tag">Flask</span>
-                    <span class="project-tag">JavaScript</span>
-                </div>
-                <p>
-                    A personal portfolio website showcasing my projects, skills, and experience.
-                </p><br>
-                <p><strong>Tech Stack:</strong> Flask, HTML, CSS, JavaScript</p>
-                <p><em>You are currently viewing the portfolio website.</em></p><br>
-                <div class="project-links">
-                    <a href="#" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mini Projects -->
-        <div class="mini-projects">
-            <h3>Mini Projects</h3>
-            <div class="mini-projects-grid">
-                <div class="mini-project">
-                    <div class="mini-project-image calculator-icon">
-                        <img src="{{ url_for('static', filename='Images/calculator.png') }}" alt="Simple Calculator">
-                    </div>
-                    <h4>Simple Calculator</h4>
-                    <div class="project-tags">
-                        <span class="project-tag">Responsive</span>
-                        <span class="project-tag">Clean UI</span>
-                    </div>
-                    <p>
-                        Modern JavaScript calculator with dark UI. Performs arithmetic operations with clean display 
-                        and intuitive layout.
-                    </p>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                    <div class="project-links">
-                        <a href="https://simple-calculator-rose-theta.vercel.app/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/keerthivasan91/Simple-Calculator" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="mini-project">
-                    <div class="mini-project-image calculator-icon">
-                        <img src="{{ url_for('static', filename='Images/weather.png') }}" alt="Weather App">
-                    </div>
-                    <h4>Weather App</h4>
-                    <div class="project-tags">
-                        <span class="project-tag">Responsive</span>
-                        <span class="project-tag">Clean and Simple UI</span>
-                        <span class="project-tag"> OpenWeatherMap API</span>
-                    </div>
-                    <p>
-                        This is a simple web application that displays a 5-day weather forecast for any city using the OpenWeatherMap API. 
-                    </p>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                    <div class="project-links">
-                        <a href="https://weather-app-chi-amber-82.vercel.app/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/keerthivasan91/WeatherApp" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="mini-project">
-                    <div class="mini-project-image game-icon">
-                        <img src="{{ url_for('static', filename='Images/rock-paper-scissors.png') }}" alt="Rock Paper Scissors Game">
-                    </div>
-                    <h4>Rock-Paper-Scissors Game</h4>
-                    <div class="project-tags">
-                        <span class="project-tag">Game</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Interactive</span>
-                    </div>
-                    <p>
-                        A fun and interactive Rock Paper Scissors game with responsive UI.
-                    </p>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                    <div class="project-links">
-                        <a href="https://rock-paper-scissors-three-ruddy.vercel.app/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/keerthivasan91/rock-paper-scissors" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="mini-project">
-                    <div class="mini-project-image ecommerce-icon">
-                        <img src="{{ url_for('static', filename='Images/ecommerce.png') }}" alt="E-Commerce DBMS Mini Project">
-                    </div>
-                    <h4>E-Commerce DBMS Project</h4>
-                    <div class="project-tags">
-                        <span class="project-tag">E-Commerce</span>
-                        <span class="project-tag">CRUD</span>
-                        <span class="project-tag">Simple Fullstack Project</span>
-                    </div>
-                    <p>
-                       A Simple Database-Driven E-Commerce Application: A full-stack implementation with a dynamic frontend, a secure backend for data persistence, and role-based access—featuring customer functions (authentication, product catalog, shopping cart) and comprehensive admin privileges for managing the platform.
-                    </p>
-                    <p><strong>Tech Stack:</strong>React.js, Python Flask, MySQL</p>
-                    <div class="project-links">
-                        <!--<a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>-->
-                        <a href="https://github.com/keerthivasan91/ecommerce-project" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="mini-project">
-                    <div class="mini-project-image chatbot-icon">
-                        <img src="{{ url_for('static', filename='Images/telegram-bot.png') }}" alt="Telegram Chatbot">
-                    </div>
-                    <h4>Telegram Chatbot</h4>
-                    <div class="project-tags">
-                        <span class="project-tag">n8n</span>
-                        <span class="project-tag">Automation</span>
-                        <span class="project-tag">API</span>
-                    </div>
-                    <p>
-                        A custom chatbot built for Telegram using Python and automation flows.
-                    </p>
-                    <p><strong>Tech Stack:</strong> Telegram API, n8n</p>
-                    <div class="project-links">
-                        <a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>
-                        <a href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <div class="header-line"></div>
     </div>
+
+    <!-- Main Projects Grid -->
+    <div class="projects-grid">
+      <div class="project-entry">
+        <div class="project-image farmer-icon">
+          <!-- You can replace this with an actual image -->
+          <!-- <img src="farmer-bot.jpg" alt="Farmer Bot Project"> -->
+          <img
+            src="{{ url_for('static', filename='Images/farmer-bot.png') }}"
+            alt="Farmer Bot Project"
+          />
+        </div>
+        <h3>Farmer Bot</h3>
+        <div class="project-tags">
+          <span class="project-tag">AI</span>
+          <span class="project-tag">Chatbot</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">API Integration</span>
+        </div>
+        <p>
+          An AI-powered chatbot for farmers to get information on crops, disease
+          management, market prices, and government schemes.<br /><br />
+          (temporarily offline after AWS free-tier expiry).
+        </p>
+        <br />
+        <p>
+          <strong>Tech Stack:</strong> JavaScript, OpenWeather API, Market
+          Prices API, Google Gemini API (AI Agent), and n8n automation
+          workflows.
+        </p>
+        <br />
+        <div class="project-links">
+          <a href="http://t.me/Projectkissanbot" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-image utca-icon">
+          <img
+            src="{{ url_for('static', filename='Images/utca-logo.png') }}"
+            alt="UTCA Conference Website"
+          />
+        </div>
+
+        <h3>UTCA Conference Website</h3>
+
+        <div class="project-tags">
+          <span class="project-tag">Web Development</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">Jinja2</span>
+          <span class="project-tag">Deployment</span>
+        </div>
+
+        <p>
+          Official conference website developed for UTCA, handling call for
+          papers, tracks, registration details, review process, and event
+          information with server-side rendering.
+        </p>
+        <br>
+        <p>
+          <strong>Tech Stack:</strong> HTML, CSS, JavaScript, Flask, Jinja2,
+          Custom Domain, Cloud Deployment.
+        </p>
+        <br>
+        <div class="project-links">
+          <a href="https://www.utca.in" target="_blank">Live Website</a>
+          <a href="https://github.com/keerthivasan91/AIP-conference" target="_blank">GitHub Repo</a>
+        </div>
+        
+      </div>
+
+      <div class="project-entry">
+        <div class="project-image portfolio-icon">
+          <img
+            src="{{ url_for('static', filename='Images/portfolio.png') }}"
+            alt="Portfolio Website"
+          />
+        </div>
+        <h3>Portfolio Website</h3>
+        <div class="project-tags">
+          <span class="project-tag">Web Development</span>
+          <span class="project-tag">Responsive</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <p>
+          A personal portfolio website showcasing my projects, skills, and
+          experience.
+        </p>
+        <br />
+        <p><strong>Tech Stack:</strong> Flask, HTML, CSS, JavaScript</p>
+        <p><em>You are currently viewing the portfolio website.</em></p>
+        <br />
+        <div class="project-links">
+          <a href="https://github.com/keerthivasan91/Personal-Website" target="_blank">GitHub Repo</a>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Mini Projects -->
+    <div class="mini-projects">
+      <h3>Mini Projects</h3>
+      <div class="mini-projects-grid">
+        <div class="mini-project">
+          <div class="mini-project-image calculator-icon">
+            <img
+              src="{{ url_for('static', filename='Images/calculator.png') }}"
+              alt="Simple Calculator"
+            />
+          </div>
+          <h4>Simple Calculator</h4>
+          <div class="project-tags">
+            <span class="project-tag">Responsive</span>
+            <span class="project-tag">Clean UI</span>
+          </div>
+          <p>
+            Modern JavaScript calculator with dark UI. Performs arithmetic
+            operations with clean display and intuitive layout.
+          </p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a
+              href="https://simple-calculator-rose-theta.vercel.app/"
+              target="_blank"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/keerthivasan91/Simple-Calculator"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="mini-project">
+          <div class="mini-project-image calculator-icon">
+            <img
+              src="{{ url_for('static', filename='Images/weather.png') }}"
+              alt="Weather App"
+            />
+          </div>
+          <h4>Weather App</h4>
+          <div class="project-tags">
+            <span class="project-tag">Responsive</span>
+            <span class="project-tag">Clean and Simple UI</span>
+            <span class="project-tag"> OpenWeatherMap API</span>
+          </div>
+          <p>
+            This is a simple web application that displays a 5-day weather
+            forecast for any city using the OpenWeatherMap API.
+          </p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a
+              href="https://weather-app-chi-amber-82.vercel.app/"
+              target="_blank"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/keerthivasan91/WeatherApp"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="mini-project">
+          <div class="mini-project-image game-icon">
+            <img
+              src="{{ url_for('static', filename='Images/rock-paper-scissors.png') }}"
+              alt="Rock Paper Scissors Game"
+            />
+          </div>
+          <h4>Rock-Paper-Scissors Game</h4>
+          <div class="project-tags">
+            <span class="project-tag">Game</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Interactive</span>
+          </div>
+          <p>
+            A fun and interactive Rock Paper Scissors game with responsive UI.
+          </p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a
+              href="https://rock-paper-scissors-three-ruddy.vercel.app/"
+              target="_blank"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/keerthivasan91/rock-paper-scissors"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="mini-project">
+          <div class="mini-project-image ecommerce-icon">
+            <img
+              src="{{ url_for('static', filename='Images/ecommerce.png') }}"
+              alt="E-Commerce DBMS Mini Project"
+            />
+          </div>
+          <h4>E-Commerce DBMS Project</h4>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">CRUD</span>
+            <span class="project-tag">Simple Fullstack Project</span>
+          </div>
+          <p>
+            A Simple Database-Driven E-Commerce Application: A full-stack
+            implementation with a dynamic frontend, a secure backend for data
+            persistence, and role-based access—featuring customer functions
+            (authentication, product catalog, shopping cart) and comprehensive
+            admin privileges for managing the platform.
+          </p>
+          <p><strong>Tech Stack:</strong>React.js, Python Flask, MySQL</p>
+          <div class="project-links">
+            <!--<a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>-->
+            <a
+              href="https://github.com/keerthivasan91/ecommerce-project"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="mini-project">
+          <div class="mini-project-image chatbot-icon">
+            <img
+              src="{{ url_for('static', filename='Images/telegram-bot.png') }}"
+              alt="Telegram Chatbot"
+            />
+          </div>
+          <h4>Telegram Chatbot</h4>
+          <div class="project-tags">
+            <span class="project-tag">n8n</span>
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">API</span>
+          </div>
+          <p>
+            A custom chatbot built for Telegram using Python and automation
+            flows.
+          </p>
+          <p><strong>Tech Stack:</strong> Telegram API, n8n</p>
+          <div class="project-links">
+            <a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>
+            <a
+              href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="mini-project">
+          <div class="mini-project-image server-icon">
+            <img
+              src="{{ url_for('static', filename='Images/live-site.png') }}"
+              alt="Mobile Web Server"
+            />
+          </div>
+
+          <h4>Mobile Web Server</h4>
+
+          <div class="project-tags">
+            <span class="project-tag">Termux</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Cloudflare</span>
+          </div>
+
+          <p>
+            A hobby project that turns an Android phone into a lightweight
+            Linux-based web server using Termux, with a Flask app securely
+            exposed over HTTPS via Cloudflare Tunnel.
+          </p>
+
+          <p>
+            <strong>Tech Stack:</strong> Android, Termux, Python, Flask, SSH,
+            Cloudflare Tunnel
+          </p>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/keerthivasan91/phone-server"
+              target="_blank"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {% endblock projects %}
