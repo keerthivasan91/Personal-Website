@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, redirect, render_template, request, flash
 import os
 from dotenv import load_dotenv # type: ignore
 from flask_mail import Mail, Message # type: ignore
@@ -18,6 +18,15 @@ app.config['MAIL_PASSWORD'] = os.getenv("MAIL_PASSWORD")
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv("MAIL_USERNAME")
 
 mail = Mail(app)
+
+@app.before_request
+def handle_subdomain_redirects():
+    host = request.host
+    if host == "linkedin.iamkeerthivasan.in":
+        return redirect("https://www.linkedin.com/in/keerthi-vasan05/", 301)
+    if host == "github.iamkeerthivasan.in":
+        return redirect("https://github.com/keerthivasan91", 301)
+
 
 @app.route('/')
 def home():
