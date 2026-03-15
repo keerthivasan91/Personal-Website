@@ -5,15 +5,14 @@
   <div class="hero-container">
     <div class="hero-text">
       <h1 class="hero-title">Keerthi Vasan P</h1>
-      <h4 class="hero-subtitle">Driven Tech Enthusiast | Passionate Programmer</h4>
+      <h4 class="hero-subtitle">Backend Engineer · Full-Stack Developer · System Administrator</h4>
       <p class="hero-location">📍 Bangalore, Karnataka</p>
       <div class="social-links">
-        <a href="https://github.com/keerthivasan91" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/keerthi-vasan05/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/keerthi_vasan_47/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/keerthivasan91" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/keerthi-vasan05/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/keerthi_vasan_47/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-    <br>
     <div class="hero-image">
       <img src="{{ url_for('static', filename='Images/Profilepic.jpg') }}"
            alt="Keerthi Vasan" class="profile-photo">
@@ -25,20 +24,19 @@
 {% block about %}
 <section class="about-me highlights" id="highlights">
   <div class="about-me-container">
-    <article class="about-me-content">
+    <div class="home-card">
       <h2 class="section-title">Quick Highlights</h2>
-      <div class="skills-list">
-        <ul class="skill-tags vertical">
-          <li>🎓 3rd Year CSE Student passionate about technology</li>
-          <li>🤖 Exploring AI, Automation & Chatbot Development</li>
-          <li>💡 Interested in solving real-world problems with code</li>
-          <li>🌍 Based in Bangalore, India</li>
-        </ul>
-      </div>
+      <ul class="home-list">
+        <li>🎓 CSE Student (Sem 6, CGPA 8.75) — IoT, Cybersecurity &amp; Blockchain specialization</li>
+        <li>🚀 Building &amp; maintaining a production LMS serving 300+ users at 99%+ uptime</li>
+        <li>🤖 Researching AI-powered fake image detection with CNNs &amp; Grad-CAM</li>
+        <li>🛠️ Strong in backend engineering, database design &amp; Linux server administration</li>
+        <li>🌍 Based in Bangalore, India · Seeking SDE &amp; full-stack internships</li>
+      </ul>
       <div class="cta-section">
         <a href="{{ url_for('about') }}" class="cta-button">More About Me</a>
       </div>
-    </article>
+    </div>
   </div>
 </section>
 {% endblock about %}
@@ -46,17 +44,18 @@
 {% block projects %}
 <section class="about-me featured-projects" id="featured-projects">
   <div class="about-me-container">
-    <article class="about-me-content">
+    <div class="home-card">
       <h2 class="section-title">Featured Projects</h2>
-      <p class="introduction">A glimpse of some things I’ve built recently:</p>
-      <ul class="skill-tags vertical">
-        <li><strong>Portfolio Website</strong> — A personal website showcasing my projects and skills.</li>
-        <li><strong>Farmer Qurries Bot</strong> — A chatbot designed to answer questions from farmers.</li>
+      <p class="introduction">Some things I've built and shipped recently:</p>
+      <ul class="home-list">
+        <li><strong>Faculty Leave Management System</strong> — Production system (Node.js, Express, MySQL, React) serving 300+ users with ACID-compliant workflows, async mail queue, and CI/CD automation.</li>
+        <li><strong>Fake Image Detection System</strong> — CNN pipeline (EfficientNet, ResNet, Xception) achieving 80%+ accuracy with Grad-CAM explainability for tampered region localization.</li>
+        <li><strong>UTCA 2026 Conference Website</strong> — Production Flask site handling paper submissions, registration, and announcements with zero downtime.</li>
       </ul>
       <div class="cta-section">
         <a href="{{ url_for('projects') }}" class="cta-button">See All Projects</a>
       </div>
-    </article>
+    </div>
   </div>
 </section>
 {% endblock projects %}
@@ -64,13 +63,13 @@
 {% block contacts %}
 <section class="about-me cta" id="cta">
   <div class="about-me-container">
-    <article class="about-me-content">
-      <h2 class="section-title">Let’s Connect</h2>
-      <p class="introduction">Looking to collaborate or discuss tech ideas? I’d be happy to chat.</p>
+    <div class="home-card home-card--center">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="introduction">Looking to collaborate, discuss tech ideas, or hire for an internship? I'd love to chat.</p>
       <div class="cta-section">
         <a href="{{ url_for('contacts') }}" class="cta-button">Contact Me</a>
       </div>
-    </article>
+    </div>
   </div>
 </section>
-{% endblock contacts %} 
+{% endblock contacts %}
