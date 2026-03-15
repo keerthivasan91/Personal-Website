@@ -7,22 +7,23 @@
   <title>{% block title %}Keerthi Vasan{% endblock %}</title>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/Logo.jpg') }}" sizes="32x32" />
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='index-fixes.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='experience-additions.css') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <meta name="description"
-    content="Keerthi Vasan's personal portfolio showcasing skills, projects, and education in Computer Science Engineering." />
-  <meta name="keywords" content="Keerthi Vasan, Portfolio, Computer Science, Programming, Developer" />
+    content="Keerthi Vasan's personal portfolio showcasing skills, projects, and experience in backend engineering and full-stack development." />
+  <meta name="keywords" content="Keerthi Vasan, Portfolio, Computer Science, Backend, Node.js, React, Developer" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <!-- Open Graph -->
   <meta property="og:title" content="Keerthivasan | Portfolio" />
-  <meta property="og:description" content="CSE student | Developer | Tech Enthusiast " />
+  <meta property="og:description" content="CSE Student · Backend Engineer · Full-Stack Developer" />
   <meta property="og:image" content="https://iamkeerthivasan.in/static/Images/preview.png" />
   <meta property="og:url" content="https://iamkeerthivasan.in" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://iamkeerthivasan.in/static/Images/preview.png" />
   <meta name="twitter:title" content="Keerthivasan | Portfolio" />
-  <meta name="twitter:description" content="CSE student | Developer | Tech Enthusiast" />
-
+  <meta name="twitter:description" content="CSE Student · Backend Engineer · Full-Stack Developer" />
 </head>
 
 <body>
@@ -36,6 +37,7 @@
     <ul>
       <li><a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
       <li><a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">About Me</a></li>
+      <li><a href="{{ url_for('experience') }}" class="{% if active_page == 'experience' %}active{% endif %}">Experience</a></li>
       <li><a href="{{ url_for('education') }}" class="{% if active_page == 'education' %}active{% endif %}">Education</a></li>
       <li><a href="{{ url_for('projects') }}" class="{% if active_page == 'projects' %}active{% endif %}">Projects</a></li>
       <li><a href="{{ url_for('skills') }}" class="{% if active_page == 'skills' %}active{% endif %}">Skills</a></li>
@@ -51,15 +53,18 @@
   <!-- Main Content -->
   <main>
     <div class="content-container"></div>
-      {% block about %} {% endblock about %} {% block education %} {% endblock
-      education %} {% block projects %} {% endblock projects %} {% block skills
-      %} {% endblock skills %} {% block contacts %} {% endblock contacts %}
+      {% block about %} {% endblock about %}
+      {% block experience %} {% endblock experience %}
+      {% block education %} {% endblock education %}
+      {% block projects %} {% endblock projects %}
+      {% block skills %} {% endblock skills %}
+      {% block contacts %} {% endblock contacts %}
     </div>
   </main>
   <!-- Footer -->
   <footer>
     <div class="footer-credit">
-      <p>© 2025 Keerthi Vasan. All rights reserved.</p>
+      <p>© 2026 Keerthi Vasan. All rights reserved.</p>
     </div>
 
     <!-- Back to Top Button -->
