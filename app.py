@@ -30,23 +30,27 @@ def handle_subdomain_redirects():
 
 @app.route('/')
 def home():
-    return render_template('index.html',active_page='home')
+    return render_template('index.html', active_page='home')
 
 @app.route('/about')
 def about():
-    return render_template('about.html',active_page='about')
+    return render_template('about.html', active_page='about')
+
+@app.route('/experience')
+def experience():
+    return render_template('experience.html', active_page='experience')
 
 @app.route('/education')
 def education():
-    return render_template('education.html',active_page='education')
+    return render_template('education.html', active_page='education')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html',active_page='projects')
+    return render_template('projects.html', active_page='projects')
 
 @app.route('/skills')
 def skills():
-    return render_template('skills.html',active_page='skills')
+    return render_template('skills.html', active_page='skills')
 
 @app.route('/contacts', methods=['GET', 'POST'])
 def contacts():
