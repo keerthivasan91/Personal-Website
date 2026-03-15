@@ -179,7 +179,93 @@ nav a.active {
     align-items: center;
     justify-content: center;
 }
+/* ========================================================
+   INDEX PAGE FIXES — append to end of styles.css
+   ======================================================== */
 
+/* Hero container — side-by-side text + photo */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 5vw, 60px);
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-text {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 0 0 auto;
+}
+
+/* On small screens, stack and center */
+@media (max-width: 640px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text .social-links {
+        justify-content: center;
+    }
+}
+
+/* Location tag under subtitle */
+.hero-location {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: #aaa;
+    margin: 8px 0 20px;
+}
+
+/* Home page cards (Highlights, Featured Projects, CTA) */
+.home-card {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.home-card--center {
+    text-align: center;
+}
+
+/* Vertical bullet list for homepage sections */
+.home-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.home-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.home-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #03dac6;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.home-list li strong {
+    color: #ffffff;
+}
 /* CTA Section Specific Styles */
 #cta .about-me-content {
     flex-direction: column;
@@ -755,6 +841,162 @@ nav a.active {
     color: #03dac6;
     text-align: center;
     font-size: clamp(0.9rem, 2.3vw, 1rem);
+}
+
+/* ========================================================
+   EXPERIENCE SECTION — append to end of styles.css
+   ======================================================== */
+
+.experience-section {
+    padding: clamp(4rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
+    background-color: #121212;
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #03dac6;
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+}
+
+.experience-entry {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border-left: 5px solid #03dac6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    transition: transform 0.2s, border-color 0.3s;
+}
+
+.experience-entry:hover {
+    transform: translateY(-3px);
+    border-color: #00ffe0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.experience-title-block h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: #00acc1;
+    margin-bottom: 0.3rem;
+}
+
+.experience-company {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #ccc;
+    margin-bottom: 0.4rem;
+}
+
+.experience-badge {
+    display: inline-block;
+    background: rgba(3, 218, 198, 0.12);
+    color: #03dac6;
+    border: 1px solid rgba(3, 218, 198, 0.3);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.experience-date {
+    color: #888;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+}
+
+.experience-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.experience-bullets li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: clamp(0.9rem, 2.5vw, 0.97rem);
+    color: #ccc;
+    line-height: 1.65;
+}
+
+.experience-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #03dac6;
+    font-size: 0.9rem;
+    top: 0.05rem;
+}
+
+.experience-bullets li strong {
+    color: #e0e0e0;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.exp-tag {
+    background: rgba(3, 218, 198, 0.08);
+    color: #03dac6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    border: 1px solid rgba(3, 218, 198, 0.18);
+}
+
+/* Inline links within project/experience text */
+.inline-link {
+    color: #03dac6;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(3, 218, 198, 0.4);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.inline-link:hover {
+    color: #00ffe0;
+    border-color: #00ffe0;
+}
+
+/* New project icon backgrounds for LMS and AI detection */
+.project-image.lms-icon:not(:has(img))::before {
+    content: '🗂️';
+}
+
+.project-image.ai-icon:not(:has(img))::before {
+    content: '🔬';
+}
+
+/* Responsive adjustments for experience */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    .experience-date {
+        white-space: normal;
+    }
 }
 
 /* Footer Section */
