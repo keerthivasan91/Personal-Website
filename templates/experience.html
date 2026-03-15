@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block experience %}
+<!-- Experience Section -->
+<section id="experience" class="experience-section">
+    <div class="container">
+        <h2>Experience</h2>
+
+        <div class="experience-entry">
+            <div class="experience-header">
+                <div class="experience-title-block">
+                    <h3>Software Developer (Contract) &amp; System Administrator</h3>
+                    <p class="experience-company">Faculty Leave Management System — Cambridge Institute of Technology, Bangalore</p>
+                    <span class="experience-badge">Paid Contract · Production</span>
+                </div>
+                <div class="experience-date">Oct 2025 – Present</div>
+            </div>
+            <ul class="experience-bullets">
+                <li>
+                    Designed, developed, and deployed <a href="https://lms.cambridge.edu.in" target="_blank" class="inline-link">lms.cambridge.edu.in</a> —
+                    a production-grade faculty leave management system using <strong>Node.js, Express, MySQL &amp; React</strong>,
+                    serving <strong>300+ institutional users</strong> (200+ WAU) at 99%+ uptime on Hostinger VPS (Nginx + PM2).
+                </li>
+                <li>
+                    Used <strong>MySQL transactions (BEGIN/COMMIT/ROLLBACK)</strong> to design an ACID-compliant approval workflow
+                    (Faculty → Substitute → HOD → Principal) with RBAC and substitute locking — eliminating race conditions
+                    and ensuring data integrity under concurrent requests.
+                </li>
+                <li>
+                    Built a resilient <strong>async mail queue</strong> using Nodemailer + MySQL with a background worker,
+                    UUID claim tokens, and exponential backoff retry — solving email delivery failures without blocking
+                    the main request lifecycle.
+                </li>
+                <li>
+                    Applied <strong>database indexing, query optimization, and connection pooling</strong> (mysql2) to achieve
+                    ~35% reduction in API response latency — validated under concurrent load testing with Autocannon.
+                </li>
+                <li>
+                    Automated infrastructure using <strong>GitHub Actions CI/CD</strong>, cron + shell scripts for daily DB &amp; app
+                    backups, zero-downtime deploys, and tested disaster recovery — reducing manual ops to near zero.
+                </li>
+            </ul>
+            <div class="experience-tags">
+                <span class="exp-tag">Node.js</span>
+                <span class="exp-tag">Express</span>
+                <span class="exp-tag">React</span>
+                <span class="exp-tag">MySQL</span>
+                <span class="exp-tag">Nginx</span>
+                <span class="exp-tag">PM2</span>
+                <span class="exp-tag">GitHub Actions</span>
+                <span class="exp-tag">Linux VPS</span>
+                <span class="exp-tag">RBAC</span>
+                <span class="exp-tag">ACID Transactions</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock experience %}
