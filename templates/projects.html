@@ -9,32 +9,87 @@
 
     <!-- Main Projects Grid -->
     <div class="projects-grid">
+
+      <!-- LMS - NEW -->
+      <div class="project-entry">
+        <div class="project-image lms-icon">
+          <!-- Replace with actual screenshot if available -->
+           <img src="{{ url_for('static', filename='Images/lms.png') }}" alt="Faculty Leave Management System"> 
+        </div>
+        <h3>Faculty Leave Management System</h3>
+        <div class="project-tags">
+          <span class="project-tag">Production</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">VPS</span>
+        </div>
+        <p>
+          A production-grade leave management system deployed at Cambridge Institute of Technology,
+          serving 300+ institutional users at 99%+ uptime. Features an ACID-compliant multi-step approval
+          workflow (Faculty → Substitute → HOD → Principal), RBAC, async mail queue with exponential
+          backoff retry, and automated CI/CD with daily DB backups.
+        </p>
+        <br />
+        <p>
+          <strong>Tech Stack:</strong> Node.js, Express, MySQL 8, React 19, Vite, TanStack Query, MUI,
+          Nginx, PM2, GitHub Actions, Hostinger VPS
+        </p>
+        <br />
+        <div class="project-links">
+          <a href="https://lms.cambridge.edu.in" target="_blank">Live Site</a>
+          <a href="https://github.com/keerthivasan91/LMS-CIT-PUBLIC" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- Fake Image Detection - NEW -->
+      <div class="project-entry">
+        <div class="project-image ai-icon">
+          <!-- <img src="{{ url_for('static', filename='Images/fake-image-detection.png') }}" alt="Fake Image Detection"> -->
+        </div>
+        <h3>Fake Image Detection System</h3>
+        <div class="project-tags">
+          <span class="project-tag">AI/ML</span>
+          <span class="project-tag">CNN</span>
+          <span class="project-tag">Computer Vision</span>
+          <span class="project-tag">Ongoing</span>
+        </div>
+        <p>
+          A CNN pipeline benchmarking EfficientNet, ResNet &amp; Xception for detecting AI-generated
+          and manipulated images. Achieved 80%+ accuracy, 90%+ recall, AUC 0.85, and uncertainty &lt;5%.
+          Integrated Grad-CAM explainability to visually localize tampered regions.
+          Designing a REST API for real-time inference with robustness evaluation across unseen forgery types.
+        </p>
+        <br />
+        <p>
+          <strong>Tech Stack:</strong> Python, TensorFlow/Keras, EfficientNet, ResNet, Xception, Grad-CAM, REST API
+        </p>
+      </div>
+
+      <!-- Farmer Bot -->
       <div class="project-entry">
         <div class="project-image farmer-icon">
-          <!-- You can replace this with an actual image -->
-          <!-- <img src="farmer-bot.jpg" alt="Farmer Bot Project"> -->
           <img
             src="{{ url_for('static', filename='Images/farmer-bot.png') }}"
             alt="Farmer Bot Project"
           />
         </div>
-        <h3>Farmer Bot</h3>
+        <h3>AI-Powered Farmer Bot</h3>
         <div class="project-tags">
           <span class="project-tag">AI</span>
           <span class="project-tag">Chatbot</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">API Integration</span>
+          <span class="project-tag">n8n</span>
+          <span class="project-tag">Automation</span>
         </div>
         <p>
-          An AI-powered chatbot for farmers to get information on crops, disease
-          management, market prices, and government schemes.<br /><br />
-          (temporarily offline after AWS free-tier expiry).
+          Automated farmer-facing workflows (weather, crop advisories, govt. schemes) via n8n +
+          Google Gemini API — reducing manual lookup to instant conversational responses with
+          multi-API orchestration.<br /><br />
+          (Temporarily offline after AWS free-tier expiry.)
         </p>
         <br />
         <p>
-          <strong>Tech Stack:</strong> JavaScript, OpenWeather API, Market
-          Prices API, Google Gemini API (AI Agent), and n8n automation
-          workflows.
+          <strong>Tech Stack:</strong> n8n, Google Gemini API, OpenWeather API, Telegram Bot API
         </p>
         <br />
         <div class="project-links">
@@ -42,6 +97,7 @@
         </div>
       </div>
 
+      <!-- UTCA Conference -->
       <div class="project-entry">
         <div class="project-image utca-icon">
           <img
@@ -50,24 +106,23 @@
           />
         </div>
 
-        <h3>UTCA Conference Website</h3>
+        <h3>UTCA 2026 Conference Website</h3>
 
         <div class="project-tags">
           <span class="project-tag">Web Development</span>
           <span class="project-tag">Flask</span>
-          <span class="project-tag">Jinja2</span>
-          <span class="project-tag">Deployment</span>
+          <span class="project-tag">Production</span>
+          <span class="project-tag">Sole Developer</span>
         </div>
 
         <p>
-          Official conference website developed for UTCA, handling call for
-          papers, tracks, registration details, review process, and event
-          information with server-side rendering.
+          Official conference website for UTCA 2026, handling paper submissions, tracks, registration,
+          review process, and event information with server-side rendering. Built and deployed solo
+          with zero downtime during the active submission period.
         </p>
         <br>
         <p>
-          <strong>Tech Stack:</strong> HTML, CSS, JavaScript, Flask, Jinja2,
-          Custom Domain, Cloud Deployment.
+          <strong>Tech Stack:</strong> HTML, CSS, JavaScript, Python Flask, Jinja2, Vercel
         </p>
         <br>
         <div class="project-links">
@@ -77,6 +132,7 @@
         
       </div>
 
+      <!-- Portfolio -->
       <div class="project-entry">
         <div class="project-image portfolio-icon">
           <img
@@ -93,11 +149,10 @@
         </div>
         <p>
           A personal portfolio website showcasing my projects, skills, and
-          experience.
+          experience. You are currently viewing it.
         </p>
         <br />
-        <p><strong>Tech Stack:</strong> Flask, HTML, CSS, JavaScript</p>
-        <p><em>You are currently viewing the portfolio website.</em></p>
+        <p><strong>Tech Stack:</strong> Flask, Jinja2, HTML, CSS, JavaScript</p>
         <br />
         <div class="project-links">
           <a href="https://github.com/keerthivasan91/Personal-Website" target="_blank">GitHub Repo</a>
@@ -128,16 +183,8 @@
           </p>
           <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
           <div class="project-links">
-            <a
-              href="https://simple-calculator-rose-theta.vercel.app/"
-              target="_blank"
-              >Live Demo</a
-            >
-            <a
-              href="https://github.com/keerthivasan91/Simple-Calculator"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://simple-calculator-rose-theta.vercel.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/keerthivasan91/Simple-Calculator" target="_blank">GitHub Repo</a>
           </div>
         </div>
 
@@ -151,25 +198,16 @@
           <h4>Weather App</h4>
           <div class="project-tags">
             <span class="project-tag">Responsive</span>
-            <span class="project-tag">Clean and Simple UI</span>
-            <span class="project-tag"> OpenWeatherMap API</span>
+            <span class="project-tag">OpenWeatherMap API</span>
           </div>
           <p>
-            This is a simple web application that displays a 5-day weather
-            forecast for any city using the OpenWeatherMap API.
+            A simple web application that displays a 5-day weather forecast
+            for any city using the OpenWeatherMap API.
           </p>
           <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
           <div class="project-links">
-            <a
-              href="https://weather-app-chi-amber-82.vercel.app/"
-              target="_blank"
-              >Live Demo</a
-            >
-            <a
-              href="https://github.com/keerthivasan91/WeatherApp"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://weather-app-chi-amber-82.vercel.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/keerthivasan91/WeatherApp" target="_blank">GitHub Repo</a>
           </div>
         </div>
 
@@ -183,7 +221,6 @@
           <h4>Rock-Paper-Scissors Game</h4>
           <div class="project-tags">
             <span class="project-tag">Game</span>
-            <span class="project-tag">JavaScript</span>
             <span class="project-tag">Interactive</span>
           </div>
           <p>
@@ -191,16 +228,8 @@
           </p>
           <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
           <div class="project-links">
-            <a
-              href="https://rock-paper-scissors-three-ruddy.vercel.app/"
-              target="_blank"
-              >Live Demo</a
-            >
-            <a
-              href="https://github.com/keerthivasan91/rock-paper-scissors"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://rock-paper-scissors-three-ruddy.vercel.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/keerthivasan91/rock-paper-scissors" target="_blank">GitHub Repo</a>
           </div>
         </div>
 
@@ -213,25 +242,17 @@
           </div>
           <h4>E-Commerce DBMS Project</h4>
           <div class="project-tags">
-            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">Full-Stack</span>
             <span class="project-tag">CRUD</span>
-            <span class="project-tag">Simple Fullstack Project</span>
+            <span class="project-tag">RBAC</span>
           </div>
           <p>
-            A Simple Database-Driven E-Commerce Application: A full-stack
-            implementation with a dynamic frontend, a secure backend for data
-            persistence, and role-based access—featuring customer functions
-            (authentication, product catalog, shopping cart) and comprehensive
-            admin privileges for managing the platform.
+            A full-stack database-driven e-commerce app with customer authentication,
+            product catalog, shopping cart, and comprehensive admin privileges.
           </p>
-          <p><strong>Tech Stack:</strong>React.js, Python Flask, MySQL</p>
+          <p><strong>Tech Stack:</strong> React.js, Python Flask, MySQL</p>
           <div class="project-links">
-            <!--<a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>-->
-            <a
-              href="https://github.com/keerthivasan91/ecommerce-project"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://github.com/keerthivasan91/ecommerce-project" target="_blank">GitHub Repo</a>
           </div>
         </div>
 
@@ -249,17 +270,12 @@
             <span class="project-tag">API</span>
           </div>
           <p>
-            A custom chatbot built for Telegram using Python and automation
-            flows.
+            A custom chatbot built for Telegram using automation flows with n8n.
           </p>
           <p><strong>Tech Stack:</strong> Telegram API, n8n</p>
           <div class="project-links">
             <a href="http://t.me/n8n_2chatbot" target="_blank">Live Demo</a>
-            <a
-              href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://github.com/keerthivasan91/WhatsApp-ChatBot-N8N-" target="_blank">GitHub Repo</a>
           </div>
         </div>
 
@@ -280,22 +296,16 @@
           </div>
 
           <p>
-            A hobby project that turns an Android phone into a lightweight
-            Linux-based web server using Termux, with a Flask app securely
-            exposed over HTTPS via Cloudflare Tunnel.
+            Turns an Android phone into a lightweight Linux-based web server using Termux,
+            with a Flask app securely exposed over HTTPS via Cloudflare Tunnel.
           </p>
 
           <p>
-            <strong>Tech Stack:</strong> Android, Termux, Python, Flask, SSH,
-            Cloudflare Tunnel
+            <strong>Tech Stack:</strong> Android, Termux, Python, Flask, SSH, Cloudflare Tunnel
           </p>
 
           <div class="project-links">
-            <a
-              href="https://github.com/keerthivasan91/phone-server"
-              target="_blank"
-              >GitHub Repo</a
-            >
+            <a href="https://github.com/keerthivasan91/phone-server" target="_blank">GitHub Repo</a>
           </div>
         </div>
       </div>
