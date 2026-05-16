@@ -14,7 +14,7 @@
                 <span>Bangalore, Karnataka, India</span>
             </div>
             <div class="contact-detail">
-                <span class="contact-icon"><i class="fab fa-envelope"></i></span>
+                <span class="contact-icon"><i class="fas fa-envelope"></i></span>
                 <a href="mailto:keerthivasan.dev27@gmail.com">keerthivasan.dev27@gmail.com</a>
             </div>
             <div class="contact-detail">
@@ -34,19 +34,25 @@
 
         <!-- Right: Contact Form -->
         <form action="{{ url_for('contacts') }}" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
 
-            <button type="submit" class="cta-button">Send Message</button>
+            <button type="submit" class="cta-button contact-submit">Send Message</button>
 
             {% if success %}
-            <p class="success-message">✅ Thank you! Your message has been sent. I'll get back to you soon.</p>
+            <p class="success-message">✅ Message sent! I'll get back to you soon.</p>
             {% endif %}
         </form>
 
