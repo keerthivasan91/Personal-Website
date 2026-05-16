@@ -3,23 +3,53 @@
 <!-- Contact Section -->
 <section id="contact">
     <h2>Contact Me</h2>
-    <div class="contact-container">
+    <p class="contact-subtitle">Open to internship opportunities, collaborations, and interesting conversations. I'll get back to you within 24–48 hours.</p>
+
+    <div class="contact-wrapper">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info">
+            <div class="contact-detail">
+                <span class="contact-icon">📍</span>
+                <span>Bangalore, Karnataka, India</span>
+            </div>
+            <div class="contact-detail">
+                <span class="contact-icon"><i class="fab fa-envelope"></i></span>
+                <a href="mailto:keerthivasan.dev27@gmail.com">keerthivasan.dev27@gmail.com</a>
+            </div>
+            <div class="contact-detail">
+                <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                <a href="https://www.linkedin.com/in/keerthi-vasan05/" target="_blank" rel="noopener">linkedin.com/in/keerthi-vasan05</a>
+            </div>
+            <div class="contact-detail">
+                <span class="contact-icon"><i class="fab fa-github"></i></span>
+                <a href="https://github.com/keerthivasan91" target="_blank" rel="noopener">github.com/keerthivasan91</a>
+            </div>
+
+            <div class="contact-availability">
+                <span class="availability-dot"></span>
+                Available for internships · Graduating 2027
+            </div>
+        </div>
+
+        <!-- Right: Contact Form -->
         <form action="{{ url_for('contacts') }}" method="POST" class="contact-form">
-            <label for="name">Name:</label>
+            <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
 
-            <label for="message">Message:</label>
+            <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-            <br>
+
             <button type="submit" class="cta-button">Send Message</button>
+
+            {% if success %}
+            <p class="success-message">✅ Thank you! Your message has been sent. I'll get back to you soon.</p>
+            {% endif %}
         </form>
-        
-        {% if success %}
-        <p class="success-message">Thank you! Your message has been sent.</p>
-        {% endif %}
+
     </div>
 </section>
 {% endblock contacts %}
