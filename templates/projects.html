@@ -14,7 +14,7 @@
       <div class="project-entry">
         <div class="project-image lms-icon">
           <!-- Replace with actual screenshot if available -->
-           <img src="{{ url_for('static', filename='Images/lms.png') }}" alt="Faculty Leave Management System"> 
+          <img src="{{ url_for('static', filename='Images/lms.png') }}" alt="Faculty Leave Management System">
         </div>
         <h3>Faculty Leave Management System</h3>
         <div class="project-tags">
@@ -44,35 +44,38 @@
 
       <!-- Fake Image Detection - NEW -->
       <div class="project-entry">
-        <div class="project-image ai-icon">
-          <!-- <img src="{{ url_for('static', filename='Images/fake-image-detection.png') }}" alt="Fake Image Detection"> -->
+        <div class="project-image ai-icon"
+          style="background: linear-gradient(135deg, rgb(21, 21, 21));">
+          <img src="{{ url_for('static', filename='Images/image.png') }}" alt="SpectraSpatial AI"
+            style="width: 100%; height: 100%; object-fit: contain;" />
         </div>
-        <h3>Fake Image Detection System</h3>
+        <h3>SpectraSpatial AI</h3>
         <div class="project-tags">
           <span class="project-tag">AI/ML</span>
           <span class="project-tag">CNN</span>
           <span class="project-tag">Computer Vision</span>
-          <span class="project-tag">Ongoing</span>
+          <span class="project-tag">FFT</span>
         </div>
         <p>
-          A CNN pipeline benchmarking EfficientNet, ResNet &amp; Xception for detecting AI-generated
-          and manipulated images. Achieved 80%+ accuracy, 90%+ recall, AUC 0.85, and uncertainty &lt;5%.
+          A CNN pipeline benchmarking EfficientNet &amp; FFT for detecting AI-generated
+          and manipulated images. Achieved 93%+ accuracy, 90%+ recall, AUC 0.99, and uncertainty &lt;2%.
           Integrated Grad-CAM explainability to visually localize tampered regions.
           Designing a REST API for real-time inference with robustness evaluation across unseen forgery types.
         </p>
         <br />
         <p>
-          <strong>Tech Stack:</strong> Python, TensorFlow/Keras, EfficientNet, ResNet, Xception, Grad-CAM, REST API
-        </p>
+          <strong>Tech Stack:</strong> Python, PyTorch, EfficientNet, FFT, Grad-CAM, REST API
+        </p><br />
+        <div class="project-links">
+          <a href="https://spectraspatialai.iamkeerthivasan.in/" target="_blank">Live Demo</a>
+          <a href="https://github.com/keerthivasan91/SpectraSpatialAI" target="_blank">GitHub Repo</a>
+        </div>
       </div>
 
       <!-- Farmer Bot -->
       <div class="project-entry">
         <div class="project-image farmer-icon">
-          <img
-            src="{{ url_for('static', filename='Images/farmer-bot.png') }}"
-            alt="Farmer Bot Project"
-          />
+          <img src="{{ url_for('static', filename='Images/farmer-bot.png') }}" alt="Farmer Bot Project" />
         </div>
         <h3>AI-Powered Farmer Bot</h3>
         <div class="project-tags">
@@ -100,10 +103,7 @@
       <!-- UTCA Conference -->
       <div class="project-entry">
         <div class="project-image utca-icon">
-          <img
-            src="{{ url_for('static', filename='Images/utca-logo.png') }}"
-            alt="UTCA Conference Website"
-          />
+          <img src="{{ url_for('static', filename='Images/utca-logo.png') }}" alt="UTCA Conference Website" />
         </div>
 
         <h3>UTCA 2026 Conference Website</h3>
@@ -129,16 +129,13 @@
           <a href="https://www.utca.in" target="_blank">Live Website</a>
           <a href="https://github.com/keerthivasan91/AIP-conference" target="_blank">GitHub Repo</a>
         </div>
-        
+
       </div>
 
       <!-- Portfolio -->
       <div class="project-entry">
         <div class="project-image portfolio-icon">
-          <img
-            src="{{ url_for('static', filename='Images/portfolio.png') }}"
-            alt="Portfolio Website"
-          />
+          <img src="{{ url_for('static', filename='Images/portfolio.png') }}" alt="Portfolio Website" />
         </div>
         <h3>Portfolio Website</h3>
         <div class="project-tags">
@@ -157,7 +154,7 @@
         <div class="project-links">
           <a href="https://github.com/keerthivasan91/Personal-Website" target="_blank">GitHub Repo</a>
         </div>
-        
+
       </div>
     </div>
 
@@ -167,10 +164,7 @@
       <div class="mini-projects-grid">
         <div class="mini-project">
           <div class="mini-project-image calculator-icon">
-            <img
-              src="{{ url_for('static', filename='Images/calculator.png') }}"
-              alt="Simple Calculator"
-            />
+            <img src="{{ url_for('static', filename='Images/calculator.png') }}" alt="Simple Calculator" />
           </div>
           <h4>Simple Calculator</h4>
           <div class="project-tags">
@@ -190,10 +184,7 @@
 
         <div class="mini-project">
           <div class="mini-project-image calculator-icon">
-            <img
-              src="{{ url_for('static', filename='Images/weather.png') }}"
-              alt="Weather App"
-            />
+            <img src="{{ url_for('static', filename='Images/weather.png') }}" alt="Weather App" />
           </div>
           <h4>Weather App</h4>
           <div class="project-tags">
@@ -213,10 +204,8 @@
 
         <div class="mini-project">
           <div class="mini-project-image game-icon">
-            <img
-              src="{{ url_for('static', filename='Images/rock-paper-scissors.png') }}"
-              alt="Rock Paper Scissors Game"
-            />
+            <img src="{{ url_for('static', filename='Images/rock-paper-scissors.png') }}"
+              alt="Rock Paper Scissors Game" />
           </div>
           <h4>Rock-Paper-Scissors Game</h4>
           <div class="project-tags">
@@ -235,10 +224,7 @@
 
         <div class="mini-project">
           <div class="mini-project-image ecommerce-icon">
-            <img
-              src="{{ url_for('static', filename='Images/ecommerce.png') }}"
-              alt="E-Commerce DBMS Mini Project"
-            />
+            <img src="{{ url_for('static', filename='Images/ecommerce.png') }}" alt="E-Commerce DBMS Mini Project" />
           </div>
           <h4>E-Commerce DBMS Project</h4>
           <div class="project-tags">
@@ -258,10 +244,7 @@
 
         <div class="mini-project">
           <div class="mini-project-image chatbot-icon">
-            <img
-              src="{{ url_for('static', filename='Images/telegram-bot.png') }}"
-              alt="Telegram Chatbot"
-            />
+            <img src="{{ url_for('static', filename='Images/telegram-bot.png') }}" alt="Telegram Chatbot" />
           </div>
           <h4>Telegram Chatbot</h4>
           <div class="project-tags">
@@ -281,10 +264,7 @@
 
         <div class="mini-project">
           <div class="mini-project-image server-icon">
-            <img
-              src="{{ url_for('static', filename='Images/live-site.png') }}"
-              alt="Mobile Web Server"
-            />
+            <img src="{{ url_for('static', filename='Images/live-site.png') }}" alt="Mobile Web Server" />
           </div>
 
           <h4>Mobile Web Server</h4>
